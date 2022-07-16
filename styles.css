@@ -1,0 +1,229 @@
+
+body {
+    background-color: #273746;
+    color: #CCD1D1;
+}
+
+nav {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.nav-link {
+    color: #CCD1D1;
+}
+
+html {
+    scroll-snap-type: y mandatory;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    display: inline-block;
+}
+
+.introSection {
+    height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 300px;
+}
+
+.sectionName {
+    color: #3066F8;
+}
+
+.hello {
+    font-size: 18px;
+}
+
+.myName {
+    font-size: 64px;
+    margin-top: -15px;
+}
+
+.statement {
+    font-size: 50px;
+    color: #7F8C8D;
+    margin-top: -20px;
+}
+
+.summary {
+    width: 500px
+    ;
+    color: #7F8C8D;
+}
+
+.aboutMeSection {
+    height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutMe {
+    width: 700px;
+}
+
+
+.profilePic {
+    width: 400px;
+    height: 400px
+}
+
+.projectSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+.projectCards {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.card {
+    width: 400px;
+    padding: 20px;
+    border-radius: 4px;
+    background-color: #273746;
+    box-shadow: #0000000d 0px 1px 3px, #0000000d 0px 10px 15px -5px, #0000000a 0px 7px 7px -5px;
+    overflow: hidden;
+}
+
+.card-header {
+    margin: -20px -20px 0 -20px;
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+}
+
+.title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #3066F8;
+}
+
+.btn {
+    border: none;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    background-color: #405263;
+    color: #7F8C8D;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #bfd8eb;
+}
+
+.contactSection {
+    height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contactHeader {
+    display: flex;
+    flex-direction: row;
+    height: 40%;
+    align-items: flex-end;
+    justify-content: center;
+    color: #3066F8;
+    text-indent: -300px;
+}
+
+.contactMe {
+    display: flex;
+    height: 30%;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.name, .email {
+    height: 45px;
+    width: 500px;
+    border-radius: 2px;
+    background-color: #405263;
+    color: #CCD1D1
+}
+
+.message {
+    width: 500px;
+    height: 150px;
+    border-radius: 2px;
+    background-color: #405263;
+    color: #CCD1D1
+}
+
+input {
+    all: unset;
+    text-indent: 15px;
+}
+
+textarea {
+    resize: none;
+    border: none;
+    outline: none;
+    width: 500px;
+    height: 150px;
+    text-indent: 15px;
+    padding-top: 15px;
+}
+
+.formBtn {
+    border: none;
+    width: 35%;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    background-color: #405263;
+    color: #7F8C8D;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.formBtn:hover {
+    background-color: #bfd8eb;
+}
+
+.socials {
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+/* @media only screen and (max-width: 850px) {
+    .introSection {
+        height: 1200px;
+    }
+
+    .aboutMeSection {
+        height: 1200px;
+    }
+
+    .projectCards {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+} */
