@@ -1,15 +1,5 @@
-
 body {
     background-color: #273746;
-    color: #CCD1D1;
-}
-
-nav {
-    margin-left: 25px;
-    margin-right: 25px;
-}
-
-.nav-link {
     color: #CCD1D1;
 }
 
@@ -17,22 +7,93 @@ html {
     scroll-snap-type: y mandatory;
 }
 
+li {
+    list-style: none;
+}
+
 a {
     text-decoration: none;
+    position: relative;
+}
+
+a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #3066F8;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+  }
+
+a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
 }
 
 ul {
     display: inline-block;
 }
 
+.navbar {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #7F8C8D;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-link{
+    font-size: 1rem;
+    font-weight: 400;
+    color: #CCD1D1;
+}
+
+.nav-link:hover{
+    color: #3066F8;
+    /* font-size: 20px; */
+}
+
+.nav-logo {
+    font-size: 1rem;
+    color: #7F8C8D;
+    margin-left: 1em;
+}
+
+
 .introSection {
+    width: 70vw;
     height: 100vh;
     scroll-snap-align: start;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin-left: 300px;
+    margin-left: 15em;
 }
 
 .sectionName {
@@ -55,8 +116,7 @@ ul {
 }
 
 .summary {
-    width: 500px
-    ;
+    width: 80vw;
     color: #7F8C8D;
 }
 
@@ -76,16 +136,25 @@ ul {
 
 .profilePic {
     width: 400px;
-    height: 400px
+    height: 400px;
+    border-radius: 50%;
 }
 
 .projectSection {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     scroll-snap-align: start;
+}
+
+.projectHeader {
+    display: flex;
+    flex-direction: row;
+    width: 65vw;
+    /* padding-left: 12em; */
+    color: #3066F8;
 }
 
 .projectCards {
@@ -95,12 +164,30 @@ ul {
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 400px;
     padding: 20px;
     border-radius: 4px;
     background-color: #273746;
     box-shadow: #0000000d 0px 1px 3px, #0000000d 0px 10px 15px -5px, #0000000a 0px 7px 7px -5px;
     overflow: hidden;
+}
+
+.technologyList {
+    width: 325px;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #7F8C8D;
+}
+
+.technology {
+    float: left;
 }
 
 .card-header {
@@ -212,18 +299,200 @@ textarea {
     justify-content: center;
 }
 
-/* @media only screen and (max-width: 850px) {
+.memoryGameGif {
+    width: 365px;
+    height: 320px;
+    background-image: url(./images/MemoryGameSS.png);
+    background-size: cover;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.memoryGameGif:hover {
+    background-image: url(./images/MemoryGame.gif);
+}
+
+.guapnarcGif {
+    width: 365px;
+    height: 320px;
+    background-image: url(./images/guapnarcSS.png);
+    background-size: cover;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.guapnarcGif:hover {
+    background-image: url(./images/guapnarc.gif);
+}
+
+.myTravelDayGif {
+    width: 365px;
+    height: 320px;
+    background-image: url(./images/myTravelDaySS.png);
+    background-size: cover;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.myTravelDayGif:hover {
+    background-image: url(./images/myTravelDay.gif);
+}
+
+@media only screen and (max-width: 399px) {
+    html {
+        scroll-snap-type: none;
+    }
+}
+
+@media only screen and (max-width: 480px) {
     .introSection {
-        height: 1200px;
+        margin: auto;
+        height: 100vh;
+    }
+
+    .profilePic {
+        display: none;
+    }
+
+    .myName {
+        font-size: 35px
+    }
+    
+    .statement {
+        font-size: 30px;
+        padding-top: 0.2em;
+        line-height: 1.0;
     }
 
     .aboutMeSection {
-        height: 1200px;
+        height: 100vh;
+        padding: 3em;
+        font-size: 14px;
+    }
+    
+
+    .profilePic {
+        width: 250px;
+        height: 250px;
     }
 
-    .projectCards {
-        display: flex;
-        flex-direction: column;
+    .card {
+        padding: 5px;
+        width: 350px;
+        height: 225px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .card-body {
+        padding: 0;
+        font-size: 14px;
+    }
+
+    .projectSection {
+        height: 100vh;
+    }
+
+    .contactHeader {
+        width: 100vw;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .name, .email, .message {
+        width: 23em;
+    }
+
+    .formBtn {
+        width: 10em;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .card-header {
+        display: none;
+    }
+
+    .aboutMeSection {
         flex-wrap: wrap;
     }
-} */
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        /* background-color: #212f3b; */
+        backdrop-filter: blur(5px);
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 1rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 1110px) {
+    .aboutMeSection {
+        padding: 10px;
+    }
+
+    .introSection {
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 7em;
+    }
+
+    .technologyList {
+        margin: 10px;
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 1219px) {
+    .projectCards {
+        justify-content: center;
+        flex-wrap: wrap;
+        height: 85vh;
+    }
+
+    /* .card {
+        width: 300px;
+    } */
+
+    .memoryGameGif, .guapnarcGif, .myTravelDayGif {
+        width: 365px;
+        height: 210px
+    }
+}
