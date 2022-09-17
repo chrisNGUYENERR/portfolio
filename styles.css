@@ -40,11 +40,12 @@ ul {
 }
 
 .navbar {
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
+    background-color: #273746;
 }
 
 .hamburger {
@@ -75,7 +76,6 @@ ul {
 
 .nav-link:hover{
     color: #3066F8;
-    /* font-size: 20px; */
 }
 
 .nav-logo {
@@ -153,7 +153,7 @@ ul {
     display: flex;
     flex-direction: row;
     width: 65vw;
-    /* padding-left: 12em; */
+
     color: #3066F8;
 }
 
@@ -338,10 +338,14 @@ textarea {
     background-image: url(./images/myTravelDay.gif);
 }
 
-@media only screen and (max-width: 399px) {
+
+
+
+/* @media only screen and (max-width: 399px) {
     html {
         scroll-snap-type: none;
     }
+
 }
 
 @media only screen and (max-width: 480px) {
@@ -351,7 +355,8 @@ textarea {
     }
 
     .profilePic {
-        display: none;
+        width: 150px;
+        height: 150px;
     }
 
     .myName {
@@ -424,7 +429,6 @@ textarea {
         left: -100%;
         top: 5rem;
         flex-direction: column;
-        /* background-color: #212f3b; */
         backdrop-filter: blur(5px);
         width: 100%;
         border-radius: 10px;
@@ -487,12 +491,308 @@ textarea {
         height: 85vh;
     }
 
-    /* .card {
-        width: 300px;
-    } */
 
     .memoryGameGif, .guapnarcGif, .myTravelDayGif {
         width: 365px;
         height: 210px
+    }
+} */
+
+
+@media only screen and (max-width: 480px) {
+    body {
+        position: none;
+    }
+    html {
+        scroll-snap-type: none;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        backdrop-filter: blur(5px);
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        padding-left: 0;
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 1rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .introSection {
+        margin-left: 2.5em;
+        width: 300px;
+    }
+
+    .hello, .statement, .summary {
+        text-decoration: none;
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .myName {
+        font-size: 36px;
+        margin: 0;
+    } 
+
+    .aboutMeSection {
+        flex-direction: column;
+        margin-top: 150px;
+    }
+
+   .aboutMe {
+        width: 300px;
+   }
+
+   .profilePic {
+        width: 200px;
+        height: 200px;
+   }
+
+   .projectHeader {
+        width: 80vw;
+        justify-content: flex-start;
+   }
+
+   .projectSection {
+        margin-top: 400px;
+   }
+
+   .projectCards {
+        flex-direction: column;
+   }
+
+   .card {
+     width: 300px;
+   }
+
+   .technologyList {
+        width: 250px;
+   }
+
+   .memoryGameGif, .guapnarcGif, .myTravelDayGif {
+        display: none;
+   }
+
+   .contactSection {
+        margin-top: 300px;
+   }
+   
+   .contactHeader {
+        display: flex;
+        text-indent: 0%;
+        width: 80vw;
+        text-indent: 35px;
+        justify-content: flex-start;
+        margin-top: -200px;
+   }
+
+   .contactMe {
+        margin-top: 150px;
+   }
+
+   .name, .email, .message {
+        width: 300px;
+   }
+
+   .formBtn {
+    width: 50%
+   }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 820px) {
+    html {
+        scroll-snap-type: none;
+        width: 100%;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        backdrop-filter: blur(5px);
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        padding: 0;
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 1rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .introSection {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .hello, .myName, .statement, .summary {
+        margin-left: 50px;
+    }
+
+    .statement {
+        font-size: 28px;
+    }
+
+    .aboutMeSection {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .aboutMe {
+        width: 100%;
+        padding: 15px
+    }
+
+    .profilePic {
+        width: 300px;
+        height: 300px;
+    }
+
+    .projectSection {
+        margin-top: 700px;
+    }
+
+    .projectHeader {
+        width: 90vw;
+        justify-content: flex-start;
+    }
+
+    .projectCards {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card {
+        width: 350px;
+    }
+
+    .memoryGameGif, .guapnarcGif, .myTravelDayGif {
+        width: 315px;
+    }
+
+    .technologyList {
+        width: 300px;
+    }
+
+    .contactSection {
+        margin-top: 300px;
+        height: 700px
+    }
+
+    .contactHeader {
+        text-indent: -10px;
+        width: 62vw;
+        margin-top: 450px;
+    }
+
+    .contactMe {
+        margin-top: 50px;
+        height: 300px;
+    }
+}
+
+@media only screen and (min-width: 821px) and (max-width: 1024px) {
+    html {
+        scroll-snap-type: none;
+    }
+
+    .introSection {
+        margin-left: 5em;
+    }
+
+    .statement {
+        font-size: 36px;
+    }
+
+    .aboutMeSection {
+        height: 100vh;
+        padding: 15px;
+    }
+
+    .profilePic {
+        height: 250px;
+        width: 250px;
+    }
+
+    .projectHeader {
+        width: 79vw;
+        justify-content: flex-start;
+    }
+
+    .projectSection {
+        margin-top: 200px;
+    }
+
+    .projectCards {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .contactHeader {
+        width: 62vw;
+        margin-top: 350px;
+        text-indent: 0px;
+    }
+
+    .contactMe {
+        margin-top: 100px;
+    }
+
+    .socials {
+        margin-top: 200px;
     }
 }
