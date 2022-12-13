@@ -152,8 +152,8 @@ ul {
 .projectHeader {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     width: 65vw;
-
     color: #3066F8;
 }
 
@@ -231,17 +231,17 @@ ul {
 .contactHeader {
     display: flex;
     flex-direction: row;
-    height: 40%;
+    height: 30%;
     align-items: flex-end;
     justify-content: center;
     color: #3066F8;
-    text-indent: -300px;
+    /* text-indent: -300px; */
 }
 
 .contactMe {
     display: flex;
-    height: 30%;
-    align-items: flex-end;
+    height: 70%;
+    /* align-items: flex-end; */
     justify-content: center;
 }
 
